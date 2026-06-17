@@ -269,9 +269,12 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Deb
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.MvcApplicationPartsAssemblyInfo.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.RazorAssemblyInfo.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.RazorAssemblyInfo.cs
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.sourcelink.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\rjimswa.dswa.cache.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\Areas\Customer\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\bundle\BulkyBookWeb.styles.css
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\projectbundle\BulkyBookWeb.bundle.scp.css
@@ -337,6 +340,8 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Deb
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\dn6q31msi8-muycvpuwrr.gz
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\5tu5xb91bb-87fc7y1x7t.gz
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\43lcozqqo5-mlv21k5csn.gz
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\800o73md2y-owo9n2bxbf.gz
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\yqdgyy4aak-owo9n2bxbf.gz
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\staticwebassets.build.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\staticwebassets.build.json.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\staticwebassets.development.json
@@ -348,7 +353,3 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Deb
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.pdb
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\BulkyBookWeb.genruntimeconfig.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\ref\BulkyBookWeb.dll
-E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\scopedcss\Areas\Customer\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\800o73md2y-mhv03tvde5.gz
-E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\obj\Debug\net9.0\compressed\yqdgyy4aak-mhv03tvde5.gz

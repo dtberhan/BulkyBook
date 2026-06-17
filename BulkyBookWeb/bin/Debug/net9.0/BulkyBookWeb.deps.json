@@ -2246,7 +2246,8 @@
         "dependencies": {
           "BulkyBook.Models": "1.0.0",
           "BulkyBook.Utility": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.17"
+          "Microsoft.EntityFrameworkCore": "9.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.17"
         },
         "runtime": {
           "BulkyBook.DataAccess.dll": {
@@ -2256,6 +2257,9 @@
         }
       },
       "BulkyBook.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.17"
+        },
         "runtime": {
           "BulkyBook.Models.dll": {
             "assemblyVersion": "1.0.0.0",

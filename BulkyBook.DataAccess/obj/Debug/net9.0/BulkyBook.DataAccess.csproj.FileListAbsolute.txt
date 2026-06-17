@@ -1,4 +1,5 @@
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\bin\Debug\net9.0\BulkyBook.DataAccess.deps.json
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\bin\Debug\net9.0\BulkyBook.DataAccess.runtimeconfig.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\bin\Debug\net9.0\BulkyBook.DataAccess.dll
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\bin\Debug\net9.0\BulkyBook.DataAccess.pdb
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\bin\Debug\net9.0\BulkyBook.Models.dll
@@ -10,8 +11,10 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.AssemblyInfoInputs.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.AssemblyInfo.cs
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.csproj.CoreCompileInputs.cache
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.sourcelink.json
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBoo.9EA05358.Up2Date
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.dll
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\refint\BulkyBook.DataAccess.dll
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.pdb
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\BulkyBook.DataAccess.genruntimeconfig.cache
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBook.DataAccess\obj\Debug\net9.0\ref\BulkyBook.DataAccess.dll
