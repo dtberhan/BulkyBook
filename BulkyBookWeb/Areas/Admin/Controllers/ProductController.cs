@@ -1,5 +1,6 @@
 ﻿using BulkyBook.DataAccess.Repo.IRepo;
 using BulkyBook.Models;
+using BulkyBook.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -9,68 +10,100 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfwork)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public ProductController(IUnitOfWork unitOfwork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfwork;
+            _hostEnvironment = hostEnvironment;
         }
         public async Task<IActionResult> Index()
         {
-            var categories = await _unitOfWork.Product.GetAll();
-           
-            return View(categories);
+            IEnumerable<Product> products =  await _unitOfWork.Product.GetAll(includeProperties:"Category");
+          
+            return View(products);
         }
 
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Upsert(int? id)
         {
-            IEnumerable<SelectListItem> categoryList = _unitOfWork.Category.GetAll().Select(c => new SelectListItem
+            IEnumerable<Category> categories = await _unitOfWork.Category.GetAll();
+           
+            ProductVM productVM = new()
             {
-                Value = c.Id.ToString(),
-                Text = c.Category.Name
-            });
-            return View();
+                CategoryList = categories.Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = c.Name
+                }),
+                Product = new Product()
+            };
+            if(id == null || id == 0)
+            {
+                return View(productVM);
+            }
+            else
+            {
+                productVM.Product = await _unitOfWork.Product.Get(u => u.Id == id);
+                return View(productVM);
+            }
+
+           
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product obj)
+        public async Task<IActionResult> Upsert(ProductVM productVM, IFormFile? file)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Add(obj);
-
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName); ;
+                    string productPath = Path.Combine(wwwRootPath, @"images\product");
+                  if(!string.IsNullOrEmpty(productVM.Product.ImageUrl))
+                    {
+                        var oldImagePath = 
+                            Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
+                }
+                if (productVM.Product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(productVM.Product);
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(productVM.Product);
+                }
                 _unitOfWork.Save();
                 TempData["success"] = "Product created successfully!";
                 return RedirectToAction("Index");
             }
-            return View(obj);
+            else
+            {
+                IEnumerable<Category> categories = await _unitOfWork.Category.GetAll();
+
+                productVM = new()
+                {
+                    CategoryList = categories.Select(c => new SelectListItem
+                    {
+                        Value = c.Id.ToString(),
+                        Text = c.Name
+                    }),
+                    Product = new Product()
+                };
+            }
+                return View(productVM);
         }
 
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var product = await _unitOfWork.Product.Get(u => u.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return View(product);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Edit(Product obj)
-        {
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Product.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Product updated successfully!";
-                return RedirectToAction("Index");
-            }
-            return View(obj);
-        }
+        
 
         public async Task<IActionResult> Delete(int? id)
         {
@@ -104,5 +137,17 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             }
 
         }
+
+        //API Calls
+        #region
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            IEnumerable<Product> products = await _unitOfWork.Product.GetAll(includeProperties: "Category");
+
+            return Json(new { data = products });
+        }
+        #endregion
+
     }
 }

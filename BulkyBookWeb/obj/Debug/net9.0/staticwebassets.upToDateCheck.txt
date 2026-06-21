@@ -29,6 +29,7 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\js\bootstrap.js
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\js\product.js
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
@@ -62,6 +63,14 @@ E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot
 E:\Projects\Dot Net\.NET core microservices\BulkyBook\Bulky\BulkyBookWeb\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\Product\097f08b9-e7c7-42a6-9775-253ce9f7d67c.jpg
+wwwroot\images\Product\12b306c1-4120-4a84-bdb1-2f3e42ca4509.jpg
+wwwroot\images\Product\2a00226d-be10-4ad1-9ed4-21bb5d754529.jpg
+wwwroot\images\Product\650e8b53-b320-461e-9a0f-4c22dfd4a6ca.jpg
+wwwroot\images\Product\aabcdf6c-2dd3-4abb-bb1c-2b18f54bd730.jpg
+wwwroot\images\Product\d72f2b14-4841-4d6d-803e-9e92b574abc3.jpg
+wwwroot\images\Product\e22a7838-eed2-4f21-a2ad-e68d26a4852f.jpg
+wwwroot\js\product.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

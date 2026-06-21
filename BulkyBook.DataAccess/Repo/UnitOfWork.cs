@@ -28,7 +28,7 @@ namespace BulkyBook.DataAccess.Repo
 
         public void Save()
         {
-            _db.SaveChangesAsync();
+            _db.SaveChanges();
         }
        
     }

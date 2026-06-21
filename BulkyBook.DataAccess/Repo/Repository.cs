@@ -1,6 +1,7 @@
 ﻿using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Repo.IRepo;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace BulkyBook.DataAccess.Repo
         {
             _db = db;
             _dbSet = _db.Set<T>();
+            _db.Products.Include(u => u.Category);
         }
 
         public void Add(T entity)
@@ -25,18 +27,32 @@ namespace BulkyBook.DataAccess.Repo
             _dbSet.Add(entity);
         }
 
-        public Task<T?> Get(Expression<Func<T?, bool>> filter)
+        public async Task<T?> Get(Expression<Func<T?, bool>> filter, string? includeProperties = null)
         {
            IQueryable<T?> query = _dbSet;
             query = query.Where(filter);
-            return query.FirstOrDefaultAsync();
+            if (!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+            return await query.FirstOrDefaultAsync();
 
         }
 
-        public Task<List<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll(string? includeProperties = null)
         {
            IQueryable<T> query = _dbSet;
-            return query.ToListAsync();
+            if(!string.IsNullOrEmpty(includeProperties))
+            {
+                foreach(var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+            return await query.ToListAsync();
         }
 
         public void Remove(T entity)
