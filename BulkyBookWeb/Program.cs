@@ -2,6 +2,7 @@ using BulkyBook.DataAccess.Data;
 using BulkyBook.DataAccess.Repo;
 using BulkyBook.DataAccess.Repo.IRepo;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationDbContext"));
 });
+
+builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -26,7 +29,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
